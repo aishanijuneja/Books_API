@@ -1,9 +1,10 @@
-const books = require('./books'); 
+const books = require('./books');
 
 exports.handler = async (event, context) => {
     
     if (event.httpMethod === 'GET') {
         
+        // Fetch a random book
         if (event.path === '/.netlify/functions/book') {
             const randomBook = books[Math.floor(Math.random() * books.length)];
             return {
@@ -16,7 +17,7 @@ exports.handler = async (event, context) => {
             };
         }
 
-       
+        // Fetch all books
         if (event.path === '/.netlify/functions/books') {
             return {
                 statusCode: 200,
@@ -24,14 +25,14 @@ exports.handler = async (event, context) => {
             };
         }
 
-        
+        // Handle unknown endpoint
         return {
             statusCode: 404,
             body: JSON.stringify({ message: "Endpoint not found" }),
         };
     }
 
-    
+    // Handle unsupported HTTP method
     return {
         statusCode: 405,
         body: JSON.stringify({ message: "Method not allowed" }),
