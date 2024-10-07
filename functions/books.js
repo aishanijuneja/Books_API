@@ -83,7 +83,6 @@ const books = [
     { title: "The Glass Bead Game", author: "Hermann Hesse" },
     { title: "Journey to the East", author: "Hermann Hesse" },
     { title: "Don Quixote", author: "Miguel de Cervantes" },
-    { title: "The Sorrows of Young Werther", author: "Johann Wolfgang von Goethe" },
     { title: "Dr. Zhivago", author: "Boris Pasternak" },
     { title: "One Day in the Life of Ivan Denisovich", author: "Aleksandr Solzhenitsyn" },
     { title: "The First Circle", author: "Aleksandr Solzhenitsyn" },

@@ -1,9 +1,7 @@
 const books = require('./books');
 
 exports.handler = async (event, context) => {
-    
     if (event.httpMethod === 'GET') {
-        
         // Fetch a random book
         if (event.path === '/.netlify/functions/book') {
             const randomBook = books[Math.floor(Math.random() * books.length)];
